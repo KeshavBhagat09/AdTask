@@ -1,6 +1,7 @@
 import React from "react";
 // import { FaBullseye, FaChartLine, FaSearch, FaGlobe, FaHandPointer, FaBullhorn } from "react-icons/fa";
 import ServicesCard from "../assets/ServicesCard.png"; // Replace with actual service image
+import ParticleButton2 from "./ParticleButton2";
 
 const Services = () => {
   return (
@@ -16,7 +17,9 @@ const Services = () => {
           className="block mx-auto mt-4 max-w-full"
         />
       </div>
-
+      <div className="flex justify-center mt-8">
+        <ParticleButton2 />
+      </div>
     </section>
   );
 };

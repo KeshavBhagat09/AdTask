@@ -8,7 +8,7 @@ import Features from "./Components/Features";
 import Services from "./Components/Services";
 import Testinomials from "./Components/Testinomials";
 import ContactUs from "./Components/ContactUs";
-import CallToAction from "./CallToAction";
+import CallToAction from "./Components/CallToAction";
 
 const App = () => {
   return (

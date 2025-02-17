@@ -1,4 +1,5 @@
 import Gradient from "../assets/Gradient1.png"; // Adjust the path if necessary
+import ParticleButton from "./ParticleButton";
 
 const Hero = () => {
   return (
@@ -28,9 +29,7 @@ const Hero = () => {
       </p>
 
       {/* Fully Rounded Button */}
-      <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transition">
-        Start Free Trial
-      </button>
+      <ParticleButton/>
       <p style={{ fontSize: "10px" }}>Try AdTask AI for 30 days</p>
 
       {/* Styles */}
