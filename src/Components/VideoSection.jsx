@@ -3,7 +3,15 @@ import YouTubeLogo from "../assets/YouTubeLogo.svg"; // Adjust the path if neces
 
 const VideoSection = () => {
   return (
-    <section className="flex justify-center py-10 bg-black">
+    <section className="relative flex justify-center py-10 bg-black">
+      {/* Gradient Background */}
+      <div
+        className="absolute inset-0 opacity-50"
+        style={{
+          background: "linear-gradient(to right, #0a0c12, #07070a, #050506)"
+        }}
+      ></div>
+
       <div className="relative w-full max-w-7xl rounded-lg overflow-hidden">
         {/* Animated Rotating Border */}
         <div className="absolute inset-0 h-full w-full rounded-lg bg-[conic-gradient(#0ea5e9_20deg,transparent_120deg)] animate-rotate"></div>

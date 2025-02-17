@@ -18,35 +18,9 @@ const BrandLogos = () => {
     { src: Intel, alt: "Intel" },
   ];
 
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    if (container) {
-      let start = 0;
-      const speed = 0.5; // Adjust speed (higher = faster)
-
-      const scroll = () => {
-        start -= speed;
-        if (start <= -container.scrollWidth / 2) {
-          start = 0; // Reset position for seamless looping
-        }
-        container.style.transform = `translateX(${start}px)`;
-        requestAnimationFrame(scroll);
-      };
-
-      scroll();
-    }
-  }, []);
-
   return (
     <div className="bg-black py-6 overflow-hidden flex justify-center">
-      <div
-        ref={containerRef}
-        className="flex items-center space-x-16 min-w-max"
-        style={{ display: "flex", whiteSpace: "nowrap" }}
-      >
+      <div className="logos-container flex items-center space-x-16 min-w-max">
         {[...logos, ...logos].map((logo, index) => (
           <img
             key={index}
@@ -58,6 +32,24 @@ const BrandLogos = () => {
           />
         ))}
       </div>
+      <style>
+        {`
+          .logos-container {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+          }
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
