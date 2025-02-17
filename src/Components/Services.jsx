@@ -1,6 +1,7 @@
 import React from "react";
 import { FaBullseye, FaChartLine, FaSearch, FaGlobe, FaHandPointer, FaBullhorn } from "react-icons/fa";
 import Service from "../assets/Service.png"; // Replace with actual service image
+import Gradient1 from "../assets/Gradient1.png"; // Replace with actual Gradient background image
 
 const services = [
   {
@@ -53,7 +54,11 @@ const Services = () => {
       {/* Service Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
         {services.map((service, index) => (
-          <div key={index} className="bg-[#161a2b] p-6 rounded-2xl shadow-lg text-center border border-gray-800">
+          <div 
+            key={index} 
+            className="bg-[#161a2b] p-6 rounded-2xl shadow-lg text-center border border-gray-800 bg-cover bg-center" 
+            style={{ backgroundImage: `url(${Gradient1})` }}
+          >
             <div className="flex justify-center text-blue-400 mb-4">
               {service.icon}
             </div>
