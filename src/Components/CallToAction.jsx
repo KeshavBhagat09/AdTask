@@ -1,4 +1,6 @@
 import React from "react";
+import ParticleButton3 from "./ParticleButton3";
+import ParticleButton4 from "./ParticleButton4";
 
 const CallToAction = () => {
   return (
@@ -9,15 +11,8 @@ const CallToAction = () => {
           Are you ready to boost <br />
           <span className="text-blue-400">your Digital Presence?</span>
         </h2>
-
-        <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center">
-          <button className="px-6 py-3 rounded-full bg-gray-800 text-gray-300 border border-gray-600 hover:bg-blue-500 hover:text-white transition">
-            Start Free Trial
-          </button>
-          <button className="px-6 py-3 rounded-full bg-transparent text-gray-300 border border-gray-600 hover:bg-gray-800 transition">
-            Schedule a Call
-          </button>
-        </div>
+        <ParticleButton3 />
+        <ParticleButton4 />
       </div>
 
       {/* Footer Section */}

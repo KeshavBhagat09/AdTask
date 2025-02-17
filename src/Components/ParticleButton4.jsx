@@ -28,7 +28,7 @@ const ParticleButton2 = () => {
   return (
     <div>
       <button ref={buttonRef} className="particle-button">
-        Start Free Trial
+        Scedule Your Call
       </button>
       <style>
         {`
